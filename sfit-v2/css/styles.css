@@ -1,0 +1,104 @@
+/*@font-face {*/
+/*    font-family: 'Oswald';*/
+/*    src: url('../fonts/Oswald-VariableFont_wght.ttf') format('truetype');*/
+/*    font-weight: normal;*/
+/*}*/
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Oswald, sans-serif;
+}
+img{
+    object-fit: cover
+}
+.container-page-content{
+    display: flex;
+    flex-direction: row;
+    padding : 2rem 3rem 2rem 3rem;
+    box-sizing: border-box;
+}
+.container-main-content{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 2rem 3rem 0 3rem;
+    justify-content: center;
+}
+.text-content{
+    margin: 1rem 2rem 1rem 0;
+}
+.container-sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.page-content{
+    display: flex;
+    flex-direction: row;
+}
+.event-img{
+    width: 25rem;
+    height: 30rem;
+}
+.sidebar-img{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    width: 21rem;
+    height: 22.5rem;
+}
+.image-frame{
+    border-radius: 1rem;
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.4);
+}
+.page-title{
+    color: #017318;
+    font-size: 1.8rem;
+}
+.event-name{
+    font-size: 2.5rem;
+}
+.event-description{
+    font-size: 1.5rem;
+    padding-right: 2.5rem;
+}
+.see-more-btn{
+    display: flex;
+    width: 8rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    font-size: 1.2rem;
+    -webkit-border-bottom-left-radius: 1.75rem ;
+    -webkit-border-top-right-radius: 1.75rem ;
+}
+.see-more-btn:hover{
+    background-color: #146b00;
+    transform: translateX(0.3rem) translateY(0.3rem);
+}
+.page-title{
+    align-items: center;
+    display: flex;
+}
+.container-text-content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    .event-description{
+        padding-right: 2.25rem;
+    }
+    padding-left: 2.25rem;
+}
+.container-img-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.image-box-left{
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
