@@ -3,18 +3,10 @@
   src: url("fonts/UTM\ Swiss\ 721\ Black\ Condensed.ttf") format('truetype');
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'UTM Swiss', Arial, Helvetica, sans-serif;
-}
-body {
-  background-color: #F0F0F0;
-  padding: 20px 1px 20px 1px;
-}
 
 .vdung-main {
+  background-color: #F0F0F0;
+  padding: 20px 1px 20px 1px;
   width: 100%;
   max-width: 2000px;
   min-height: 573px;
