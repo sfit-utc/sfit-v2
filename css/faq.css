@@ -8,20 +8,6 @@
     src: url("fonts/Montserrat-VariableFont_wght.ttf") format('truetype'); 
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', 'Anton';
-}
-
-
-body {
-    background-color: #FFFFFF; 
-    padding: 40px 5px; 
-}
-
-
 .vdung-box {
     width: 100%; 
     max-width: 2000px;
@@ -32,7 +18,9 @@ body {
     padding: 0 0 40px 0; 
     border: 1px solid #004812; 
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 40px 5px;
 }
 
 
@@ -75,7 +63,7 @@ h1 {
 .vdung-ask {
     font-size: 24px;     
     color: #007724; 
-    margin-bottom: ;
+    margin-bottom: 10px ;
     font-weight: normal; 
 }
 
