@@ -11,58 +11,58 @@ body{
 img{
     object-fit: cover
 }
-.container-page-content{
+.vu-container-page-content{
     display: flex;
     flex-direction: row;
     padding : 2rem 3rem 2rem 3rem;
     box-sizing: border-box;
 }
-.container-main-content{
+.vu-container-main-content{
     display: flex;
     flex-direction: column;
     width: 75%;
     margin: 2rem 3rem 0 3rem;
     justify-content: center;
 }
-.text-content{
+.vu-text-content{
     margin: 1rem 2rem 1rem 0;
 }
-.container-sidebar{
+.vu-container-sidebar{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-.page-content{
+.vu-page-content{
     display: flex;
     flex-direction: row;
 }
-.event-img{
+.vu-event-img{
     width: 25rem;
     height: 30rem;
 }
-.sidebar-img{
+.vu-sidebar-img{
     margin-top: 3rem;
     margin-bottom: 1rem;
     width: 21rem;
     height: 22.5rem;
 }
-.image-frame{
+.vu-image-frame{
     border-radius: 1rem;
     box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.4);
 }
-.page-title{
+.vu-page-title{
     color: #017318;
     font-size: 1.8rem;
 }
-.event-name{
+.vu-event-name{
     font-size: 2.5rem;
 }
-.event-description{
+.vu-event-description{
     font-size: 1.5rem;
     padding-right: 2.5rem;
 }
-.see-more-btn{
+.vu-see-more-btn{
     display: flex;
     width: 8rem;
     height: 3rem;
@@ -75,15 +75,15 @@ img{
     -webkit-border-bottom-left-radius: 1.75rem ;
     -webkit-border-top-right-radius: 1.75rem ;
 }
-.see-more-btn:hover{
+.vu-see-more-btn:hover{
     background-color: #146b00;
     transform: translateX(0.3rem) translateY(0.3rem);
 }
-.page-title{
+.vu-page-title{
     align-items: center;
     display: flex;
 }
-.container-text-content{
+.vu-container-text-content{
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -92,13 +92,13 @@ img{
     }
     padding-left: 2.25rem;
 }
-.container-img-content{
+.vu-container-img-content{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.image-box-left{
+.vu-image-box-left{
     padding-right: 3rem;
     padding-left: 3rem;
 }
@@ -110,32 +110,32 @@ img{
     img{
         object-fit: cover
     }
-    .container-page-content {
+    .vu-container-page-content {
         flex-direction: column;
         padding: 1rem;
         margin: 1rem;
     }
-    .container-main-content,
-    .container-text-content,
-    .page-content {
+    .vu-container-main-content,
+    .vu-container-text-content,
+    .vu-page-content {
         width: 100%;
         margin: 0;
         padding: 0;
         align-items: center;
     }
 
-    .page-content {
+    .vu-page-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .container-img-content {
+    .vu-container-img-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .image-box-left,
-    .image-box-right {
+    .vu-image-box-left,
+    .vu-image-box-right {
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -143,15 +143,15 @@ img{
         align-items: center;
     }
 
-    .event-img,
-    .sidebar-img,
-    .image-frame {
+    .vu-event-img,
+    .vu-sidebar-img,
+    .vu-image-frame {
         align-items: center;
         width: 30rem;
         height: 20rem;
     }
 
-    .see-more-btn {
+    .vu-see-more-btn {
         width: 60%;
         text-align: center;
         justify-content: center;
@@ -159,17 +159,17 @@ img{
         margin-bottom: 3rem;
     }
 
-    .text-content,
-    .container-text-content {
+    .vu-text-content,
+    .vu-container-text-content {
         padding: 1rem;
         margin: 0;
         align-items: center;
     }
-    .event-description{
+    .vu-event-description{
         text-align: center;
         padding: 0 1rem 0 2rem;
     }
-    .container-sidebar {
+    .vu-container-sidebar {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
@@ -182,38 +182,38 @@ img{
 
 
 @media screen and (max-width: 600px) {
-    .event-name {
+    .vu-event-name {
         font-size: 2rem;
     }
-    .page-content{
+    .vu-page-content{
         display: flex;
         flex-direction: column;
     }
-    .event-description {
+    .vu-event-description {
         font-size: 1.2rem;
     }
 
-    .see-more-btn {
+    .vu-see-more-btn {
         font-size: 1rem;
         height: 2.5rem;
     }
 
-    .container-img-content {
+    .vu-container-img-content {
         align-items: stretch;
     }
-    .container-text-content{
+    .vu-container-text-content{
         margin: 1rem 0 5rem 0;
     }
-    .text-content{
+    .vu-text-content{
         margin: 1rem 0 5rem 0;
     }
-    .image-frame {
+    .vu-image-frame {
         height:  20rem;
         border-radius: 0.75rem;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     }
 
-    .page-title {
+    .vu-page-title {
         font-size: 1.5rem;
         text-align: center;
         justify-content: center;
