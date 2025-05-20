@@ -9,6 +9,8 @@
 }
 
 .vdung-box {
+   background-color: #FFFFFF; 
+    padding: 40px 5px; 
     width: 100%; 
     max-width: 2000px;
     min-height: 726px; 
@@ -24,7 +26,7 @@
 }
 
 
-h1 {
+.vdung-top-title {
     font-family: 'Anton'; 
     color: #FFFFFF; 
     font-size: 60px; 
