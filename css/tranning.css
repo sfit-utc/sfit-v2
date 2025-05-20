@@ -4,34 +4,35 @@ body {
   margin: 0;
   padding: 0;
 }
-.huy-title1 {
-  position: relative;
-  font-size: 48px;
-  color: #2e7d32;
-  margin-bottom: 60px;
-  text-align: center;
+.huy-title-wrapper {
+    text-align: center;
+}
 
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+.huy-title1 {
+    font-size: 48px;
+    color: #2e7d32;
+    margin-bottom: 60px;
+    display: inline-block;
+    position: relative;
 }
 
 .huy-title1::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 4px;
-  background-color: #2e7d32;
-  transition: width 0.4s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background-color: #2e7d32;
+    transition: width 0.4s ease;
 }
 
 .huy-title1:hover::after {
-  width: 100%;
-  background-color: #f9a825;
+    width: 100%;
+    background-color: #f9a825;
 }
+
 
 .huy-title {
   text-align: center;
