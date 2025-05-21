@@ -1,15 +1,10 @@
 @font-face {
   font-family: "UTM Swiss";
-  src: url(../khoat-fonts/UTM\ Swiss\ 721\ Black\ Condensed.ttf)
-    format("truetype");
+  src: url("../fonts/UTM\ Swiss\ 721\ Black\ Condensed.ttf") format("truetype");
 }
 @font-face {
   font-family: "fb";
-  src: url(../khoat-fonts/UTM\ FacebookR\ K&T.ttf) format("truetype");
-}
-body {
-  background-color: white;
-  color: black;
+  src: url("../fonts/UTM\ FacebookR\ K&T.ttf") format("truetype");
 }
 
 .khoat-background {
@@ -52,6 +47,7 @@ body {
 }
 
 .khoat-covan {
+  background-color: white;
   width: 500px;
   border-radius: 15px;
   box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.2);
