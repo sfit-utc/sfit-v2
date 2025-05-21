@@ -20,7 +20,9 @@
     padding: 0 0 40px 0; 
     border: 1px solid #004812; 
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 40px 5px;
 }
 
 
@@ -63,7 +65,7 @@
 .vdung-ask {
     font-size: 24px;     
     color: #007724; 
-    margin-bottom: 10; 
+    margin-bottom: 10px ;
     font-weight: normal; 
 }
 
