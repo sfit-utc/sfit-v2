@@ -1,82 +1,52 @@
+:root {
+  --leader-img-desktop: 250px;
+  --leader-img-mobile: 210px;
+  --deputies-img-desktop: 210px;
+  --deputies-img-mobile: 160px;
+  --deputies-gap: 40px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
 }
 
-/* Body */
-/* body {
-  background: #f0fff0;
-  padding: 30px;
-  text-align: center;
-} */
+/* ============ Cho mobile =========== */
 .club-leaders {
+  padding: 20px 10px;
   background: #f0fff0;
-  padding: 30px;
   text-align: center;
+  justify-content: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* Tiêu đề chính */
-.club-leaders-title-wrapper {
+.club-leaders h1 {
+  color: #007724;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.club-leaders-title {
+  padding: 10px;
   display: inline-block;
   position: relative;
-  /* font-family: 'Courier New', Courier, monospace; */
 }
-
-.club-leaders-title {
-  color: #006400; /* Màu xanh đậm */
+.club-leaders-title > h1 {
   font-size: 30px;
   font-weight: 900;
-  letter-spacing: 2px;
-  margin: 0;
-  position: relative;
-  text-decoration: underline;
+  letter-spacing: 1px;
 }
 
-/* Khối Ban chủ nhiệm */
+/* ===== KHỐI BAN CHỦ NHIỆM ===== */
 .club-leaders-board {
-  margin-top: 40px;
+  padding: 30px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-}
-
-/* Chủ nhiệm */
-.club-leaders-leader {
-  display: flex;
-  justify-content: center;
-}
-
-/* Các phó chủ nhiệm */
-.club-leaders-deputies {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-/* Ảnh avatar thành viên */
-.club-leaders-member {
-  flex: 1;
+  overflow: hidden;
   position: relative;
-  /* width: 160px; */
-  width: 300px;
-  height: 200px;
-}
-
-.club-leaders-member > h1 {
-  font-size: 1rem;
-}
-
-.club-leaders-member > img {
-  width: 160px;
-  height: 160px;
 }
 
 .club-leaders-avatar {
@@ -88,38 +58,89 @@
   cursor: pointer;
 }
 
-/* Thẻ thông tin khi hover */
+.club-leaders-member {
+  position: relative;
+  scroll-snap-align: center;
+}
+
+/* ================================================ Chủ nhiệm ================================================ */
+.club-leaders-leader {
+  display: flex;
+  justify-content: center;
+}
+
+.club-leaders-leader .club-leaders-member {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.club-leaders-leader .club-leaders-member > h1 {
+  font-size: 1.5rem;
+}
+
+.club-leaders-leader .club-leaders-member > img {
+  width: var(--leader-img-mobile);
+  height: var(--leader-img-mobile);
+}
+
+/* ================================================ Phó chủ nhiệm ================================================ */
+.club-leaders-deputies {
+  gap: var(--deputies-gap);
+  /* padding: 0 10vw; */
+  /* transition: transform 0.4s ease-in-out; */
+  transition: transform 0.5s;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .club-leaders-deputies .club-leaders-member {
+    flex: 0 0 50vw;
+    max-width: 50vw;
+  }
+}
+
+.club-leaders-deputies .club-leaders-member > h1 {
+  font-size: 1rem;
+}
+
+.club-leaders-deputies .club-leaders-member > img {
+  width: var(--deputies-img-mobile);
+  height: var(--deputies-img-mobile);
+}
+.club-leaders-deputies .club-leaders-member.main > img {
+  width: calc(var(--deputies-img-mobile) + 20px);
+  height: calc(var(--deputies-img-mobile) + 20px);
+}
+
+/* ===== INFO CARD ===== */
 .club-leaders-info-card {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 250px;
   background: white;
   border-radius: 10px;
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   transition: all 0.5s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
   z-index: 1;
+  overflow: hidden;
 }
 
 img:hover + h1 + .club-leaders-info-card,
 .club-leaders-info-card:hover {
-  /* .member:hover .info-card { */
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   z-index: 10;
 }
 
-/* Card chung */
+/* ===== CARD THÔNG TIN ===== */
 .club-leaders-card {
   background: #fff;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
 }
@@ -127,35 +148,25 @@ img:hover + h1 + .club-leaders-info-card,
 /* Banner */
 .club-leaders-card-banner {
   width: 100%;
-  height: 120px;
-  overflow: hidden;
 }
-
 .club-leaders-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Phần nội dung card */
+/* Thân card */
 .club-leaders-card-body {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 20px;
-  gap: 20px;
 }
-
 .club-leaders-avatar-wrapper {
   position: absolute;
-  top: -50px; /* Avatar chồng lên banner */
-  left: 50%;
+  left: 20%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
 }
-
 .club-leaders-avatar-img {
   width: 100%;
   height: 100%;
@@ -163,105 +174,254 @@ img:hover + h1 + .club-leaders-info-card,
   border: 4px solid #fff;
   object-fit: cover;
 }
-
-/* Nội dung chi tiết */
 .club-leaders-info-wrapper {
+  text-align: left;
   width: 100%;
-  text-align: center;
-  padding-top: 20px;
 }
-
 .club-leaders-name {
-  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
-
 .club-leaders-role {
-  font-size: 14px;
   color: #555;
-  margin-bottom: 15px;
 }
 
-/* Khu vực nút và icon */
+/* Nút */
 .club-leaders-action {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }
-
 .club-leaders-follow-btn {
   background: none;
   color: #006400;
   border: 2px solid #006400;
-  padding: 8px 20px;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
-
 .club-leaders-follow-btn:hover {
   background: #006400;
   color: white;
 }
-
+.club-leaders-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
 .club-leaders-social-icons a {
   display: inline-block;
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
 }
-
 .club-leaders-social-icons a img {
   background-color: whitesmoke;
-  width: 24px;
+  display: block;
   cursor: pointer;
-  display: block; /* tránh khoảng trắng dưới ảnh nếu cần */
+  width: 20px;
 }
 
-/* Responsive cho màn hình to hơn 600px */
-@media (min-width: 800px) {
-  body {
-    padding: 50px;
+/* ===== leader INFO CARD ===== */
+.club-leaders-leader .club-leaders-info-card {
+  height: calc(var(--leader-img-mobile) + 50px);
+  width: 350px;
+}
+
+.club-leaders-leader .club-leaders-card-banner {
+  height: 90px;
+}
+
+.club-leaders-leader .club-leaders-avatar-wrapper {
+  top: -60px;
+  width: 90px;
+  height: 90px;
+}
+
+.club-leaders-leader .club-leaders-card-body {
+  padding: 30px 15px 15px;
+}
+
+.club-leaders-leader .club-leaders-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.club-leaders-leader .club-leaders-role {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.club-leaders-leader .club-leaders-follow-btn {
+  padding: 5px 15px;
+}
+
+/* ===== deputies INFO CARD ===== */
+.club-leaders-deputies .club-leaders-info-card {
+  height: calc(var(--leader-img-mobile) + 50px);
+  width: 350px;
+}
+
+.club-leaders-deputies .club-leaders-card-banner {
+  height: 90px;
+}
+
+.club-leaders-deputies .club-leaders-avatar-wrapper {
+  top: -60px;
+  width: 90px;
+  height: 90px;
+}
+
+.club-leaders-deputies .club-leaders-card-body {
+  padding: 30px 15px 15px;
+}
+
+.club-leaders-deputies .club-leaders-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.club-leaders-deputies .club-leaders-role {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.club-leaders-deputies .club-leaders-follow-btn {
+  padding: 5px 15px;
+}
+
+@media (min-width: 500px) {
+  .club-leaders-deputies {
+    gap: 10px;
+  }
+}
+
+@media (min-width: 650px) {
+  .club-leaders-deputies {
+    gap: 25px;
+  }
+}
+
+/* ====== RESPONSIVE CHO MÀN TO (DESKTOP) ====== */
+@media (min-width: 768px) {
+  .club-leaders {
+    padding: 20px;
   }
 
   .club-leaders-title {
-    font-size: 48px;
+    padding: 20px;
   }
 
-  .club-leaders-member > h1 {
+  .club-leaders-title > h1 {
+    font-size: 50px;
+  }
+
+  .club-leaders-board {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .club-leaders-leader .club-leaders-member > h1 {
     font-size: 2rem;
   }
 
-  .club-leaders-info-card {
-    width: 460px;
+  .club-leaders-leader .club-leaders-member > img {
+    width: var(--leader-img-desktop);
+    height: var(--leader-img-desktop);
   }
 
-  .club-leaders-card-body {
-    flex-direction: row;
-    align-items: center;
-    padding-top: 20px;
+  .club-leaders-deputies {
+    padding: 0;
+    transform: none !important;
+    gap: 50px;
   }
 
-  .club-leaders-info-wrapper {
-    text-align: left;
+  .club-leaders-deputies .club-leaders-member > h1 {
+    font-size: 1.5rem;
   }
 
-  .club-leaders-avatar-wrapper {
-    position: absolute;
-    top: -40%;
-    left: 10%;
-    transform: none;
+  .club-leaders-deputies .club-leaders-member > img {
+    width: var(--deputies-img-desktop);
+    height: var(--deputies-img-desktop);
+  }
+
+  /* ===== INFO CARD ===== */
+  .club-leaders-social-icons a img {
+    width: 24px;
+  }
+
+  /* ===== leader INFO CARD ===== */
+  .club-leaders-leader .club-leaders-info-card {
+    height: calc(var(--leader-img-desktop) + 50px);
+    width: 430px;
+  }
+
+  .club-leaders-leader .club-leaders-card-banner {
+    height: 100px;
+  }
+
+  .club-leaders-leader .club-leaders-avatar-wrapper {
+    top: -60px;
     width: 100px;
     height: 100px;
-    margin-right: 20px;
   }
 
-  .club-leaders-action {
-    margin-top: 10px;
-    justify-content: space-between;
+  .club-leaders-leader .club-leaders-card-body {
+    padding: 40px 20px 20px;
+  }
+
+  .club-leaders-leader .club-leaders-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .club-leaders-leader .club-leaders-role {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .club-leaders-leader .club-leaders-follow-btn {
+    padding: 8px 20px;
+  }
+
+  /* ===== deputies INFO CARD ===== */
+  .club-leaders-deputies .club-leaders-info-card {
+    height: calc(var(--deputies-img-desktop) + 50px);
+    width: 380px;
+  }
+
+  .club-leaders-deputies .club-leaders-card-banner {
+    height: 90px;
+  }
+
+  .club-leaders-deputies .club-leaders-avatar-wrapper {
+    top: -50px;
+    width: 85px;
+    height: 85px;
+  }
+
+  .club-leaders-deputies .club-leaders-card-body {
+    padding: 30px 15px 15px;
+  }
+
+  .club-leaders-deputies .club-leaders-name {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .club-leaders-deputies .club-leaders-role {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .club-leaders-deputies .club-leaders-follow-btn {
+    padding: 5px 20px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .club-leaders-deputies {
+    gap: 100px;
   }
 }
