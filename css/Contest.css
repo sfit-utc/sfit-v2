@@ -104,7 +104,7 @@
 
 @media (max-width: 768px) {
   .vdung-title {
-      font-size: 40px;
+      font-size: 35px;
   }
   .vdung-flex {
       flex-direction: column;
