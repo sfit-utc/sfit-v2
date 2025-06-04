@@ -1,0 +1,370 @@
+/* Container chính với viền bo cong */
+.thanhtich-container {
+  width: 90%;
+  /* max-width: 1400px; */
+  margin: 20px auto;
+  position: relative;
+  border: 2px solid #00821D;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Phần tiêu đề THÀNH TÍCH */
+.thanhtich-header-title {
+  position: relative;
+  height: 50px;
+  margin-bottom: -25px;
+  z-index: 10;
+}
+
+.thanhtich-title-pill {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 10px 80px;
+  border: 2px solid #f2f5f2;
+  border-radius: 50px;
+}
+
+.thanhtich-title-pill h1 {
+  font-size: 36px;
+  color: #00821D;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Section Thành Tích */
+.thanhtich-section {
+  width: 100%;
+  position: relative;
+}
+
+/* Ẩn radio */
+input[name="slider"] {
+  display: none;
+}
+
+/* Slider container */
+.thanhtich-slider {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+/* Wrapper slide */
+.thanhtich-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mỗi slide */
+.thanhtich-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+
+/* Ảnh chính */
+.thanhtich-slide .thanhtich-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hiển thị slide khi radio tương ứng checked */
+#slide1:checked ~ .thanhtich-slider .thanhtich-slides .thanhtich-s1,
+#slide2:checked ~ .thanhtich-slider .thanhtich-slides .thanhtich-s2,
+#slide3:checked ~ .thanhtich-slider .thanhtich-slides .thanhtich-s3,
+#slide4:checked ~ .thanhtich-slider .thanhtich-slides .thanhtich-s4 {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Wrapper cho content để sắp xếp layout */
+.thanhtich-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  z-index: 2;
+}
+
+/* Phần nội dung (title + desc) */
+.thanhtich-slide .thanhtich-info {
+  max-width: 550px;
+  padding-top: 50px;
+}
+
+/* Tiêu đề */
+.thanhtich-slide .thanhtich-info h2 {
+  font-size: 72px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Mô tả */
+.thanhtich-slide .thanhtich-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 30px;
+  max-width: 95%;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Nút xem thêm */
+.thanhtich-btn-more {
+  display: inline-block;
+  background: #00821D;
+  color: white;
+  padding: 12px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  transition: background-color 0.3s;
+}
+
+.thanhtich-btn-more:hover {
+  background: #006617;
+}
+
+/* Ảnh thumbnail */
+.thanhtich-thumbnail {
+  width: 500px;
+  height: 300px;
+  border: 5px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin-top: 50px;
+}
+
+.thanhtich-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Điểm tròn điều hướng */
+.thanhtich-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.thanhtich-dots label {
+  width: 14px;
+  height: 14px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thanhtich-dots label:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+#slide1:checked ~ .thanhtich-slider .thanhtich-dots label[for="slide1"],
+#slide2:checked ~ .thanhtich-slider .thanhtich-dots label[for="slide2"],
+#slide3:checked ~ .thanhtich-slider .thanhtich-dots label[for="slide3"],
+#slide4:checked ~ .thanhtich-slider .thanhtich-dots label[for="slide4"] {
+  background: #00821D;
+  transform: scale(1.3);
+}
+
+/* Overlay gradient cho ảnh */
+.thanhtich-slide::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .thanhtich-content-wrapper {
+    padding: 0 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .thanhtich-slide .thanhtich-info {
+    max-width: 90%;
+  }
+  
+  .thanhtich-slide .thanhtich-info h2 {
+    font-size: 60px;
+  }
+  
+  .thanhtich-thumbnail {
+    width: 400px;
+    height: 240px;
+    margin-top: 30px;
+  }
+  
+  .thanhtich-slider {
+    height: 550px;
+  }
+}
+
+@media (max-width: 900px) {
+  .thanhtich-content-wrapper {
+    padding: 0 40px;
+  }
+  
+  .thanhtich-slide .thanhtich-info h2 {
+    font-size: 48px;
+  }
+  
+  .thanhtich-slide .thanhtich-info p {
+    font-size: 16px;
+  }
+  
+  .thanhtich-thumbnail {
+    width: 350px;
+    height: 210px;
+    margin-top: 20px;
+  }
+  
+  .thanhtich-btn-more {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  
+  .thanhtich-slider {
+    height: 500px;
+  }
+  
+  .thanhtich-title-pill h1 {
+    font-size: 30px;
+  }
+  
+  .thanhtich-title-pill {
+    padding: 8px 60px;
+  }
+  
+  .thanhtich-container {
+    border-radius: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .thanhtich-content-wrapper {
+    padding: 0 30px;
+  }
+  
+  .thanhtich-slide .thanhtich-info h2 {
+    font-size: 42px;
+  }
+  
+  .thanhtich-thumbnail {
+    width: 300px;
+    height: 180px;
+  }
+  
+  .thanhtich-slider {
+    height: 450px;
+  }
+  
+  .thanhtich-title-pill h1 {
+    font-size: 26px;
+  }
+  
+  .thanhtich-title-pill {
+    padding: 8px 50px;
+  }
+  
+  .thanhtich-container {
+    border-radius: 30px;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .thanhtich-content-wrapper {
+    padding: 0 20px;
+  }
+  
+  .thanhtich-slide .thanhtich-info h2 {
+    font-size: 36px;
+  }
+  
+  .thanhtich-slide .thanhtich-info p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .thanhtich-thumbnail {
+    width: 250px;
+    height: 150px;
+  }
+  
+  .thanhtich-btn-more {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+  
+  .thanhtich-slider {
+    height: 400px;
+  }
+  
+  .thanhtich-container {
+    border-radius: 25px;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  
+  .thanhtich-title-pill h1 {
+    font-size: 22px;
+  }
+  
+  .thanhtich-title-pill {
+    padding: 6px 40px;
+  }
+  
+  .thanhtich-dots {
+    bottom: 20px;
+  }
+  
+  .thanhtich-dots label {
+    width: 12px;
+    height: 12px;
+  }
+}
