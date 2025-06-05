@@ -14,7 +14,10 @@
 
 /* ============ Cho mobile =========== */
 .club-leaders {
-  padding: 20px 10px;
+  border-radius: 50px;
+  border: 1px solid #004812;
+  margin: 10px;
+  padding: 20px 0px;
   background: #EFFFF1;
   text-align: center;
   justify-content: center;
@@ -90,6 +93,7 @@
   gap: var(--deputies-gap);
   /* padding: 0 10vw; */
   /* transition: transform 0.4s ease-in-out; */
+  margin: 40px;
   transition: transform 0.5s;
   will-change: transform;
   display: flex;
@@ -290,7 +294,7 @@ img:hover + h1 + .club-leaders-info-card,
   padding: 5px 15px;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
   .club-leaders-deputies {
     gap: 10px;
   }
@@ -300,12 +304,14 @@ img:hover + h1 + .club-leaders-info-card,
   .club-leaders-deputies {
     gap: 25px;
   }
-}
+} */
 
 /* ====== RESPONSIVE CHO MÀN TO (DESKTOP) ====== */
 @media (min-width: 768px) {
   .club-leaders {
-    padding: 20px;
+    padding: 20px 10px;
+    margin: 10px;
+    margin-bottom: 20px;
   }
 
   .club-leaders-title {
