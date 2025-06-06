@@ -9,20 +9,19 @@
 }
 
 .vdung-box {
-   background-color: #FFFFFF; 
-    padding: 40px 5px; 
+   
     width: 100%; 
     max-width: 2000px;
     min-height: 726px; 
     margin: 0 auto; 
-    background-color: #FFFFFF; 
     border-radius: 50px; 
-    padding: 0 0 40px 0; 
     border: 1px solid #004812; 
     position: relative;
     overflow: hidden;
     background-color: #FFFFFF;
-    padding: 40px 5px;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 300px;
 }
 
 
@@ -36,6 +35,7 @@
     text-align: center;
     background-color: #007724; 
     padding: 15px 0; 
+    margin-top: 0;
 }
 
 
@@ -122,26 +122,72 @@
 }
 
 
+@font-face {
+    font-family: 'Anton'; 
+    src: url("fonts/Anton-Regular.ttf") format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url("fonts/Montserrat-VariableFont_wght.ttf") format('truetype'); 
+}
+
+
+
+
+
+
+.vdung-txt {
+    white-space: pre-wrap; 
+    font-size: 16px;
+    line-height: 1.5; 
+    padding-top: 10px; 
+    color: #007724;
+    padding-left: 45px; 
+}
+
+
+/*sửa lại reponsive*/
 @media screen and (max-width: 768px) {
     .vdung-box {
         border-radius: 30px; 
-        padding: 0 0 20px 0; 
+        padding: 0 0 20px 0;
+        min-height: auto;
     }
-    
-    h1 {
-        font-size: 40px; 
+     .vdung-top {
+        border-radius: 30px 30px 0 0;
     }
+    .vdung-top-title {
+        font-size: 20px;
+    }
+ 
     
     .vdung-ask {
-        font-size: 20px; 
+        font-size: 13px; 
+        line-height: 1.4;
+        margin-bottom: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
+     .vdung-lst {
+        margin-top: 30px;
+        padding: 0 15px;
+        
     }
     
+   
     .vdung-row {
         padding: 15px; 
         width: 98%; 
     }
-    
-    .vdung-txt {
-        padding-left: 20px; 
+    .vdung-rep {
+        text-align: left;
     }
+    .vdung-txt {
+        font-size: 13px;
+        padding-left: 0;
+        line-height: 1.6;
+        margin-left: 10px;
+    }
+
 }
