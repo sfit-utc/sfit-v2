@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Anton'; 
+    src: url("fonts/Anton-Regular.ttf") format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Montserrat'; 
+    src: url("fonts/Montserrat-VariableFont_wght.ttf") format('truetype'); 
+}
+
+.vdung-box {
+   background-color: #FFFFFF; 
+    padding: 40px 5px; 
+    width: 100%; 
+    max-width: 2000px;
+    min-height: 726px; 
+    margin: 0 auto; 
+    background-color: #FFFFFF; 
+    border-radius: 50px; 
+    padding: 0 0 40px 0; 
+    border: 1px solid #004812; 
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    padding: 40px 5px;
+}
+
+
+.vdung-top-title {
+    font-family: 'Anton'; 
+    color: #FFFFFF; 
+    font-size: 60px; 
+}
+
+.vdung-top {
+    text-align: center;
+    background-color: #007724; 
+    padding: 15px 0; 
+}
+
+
+.vdung-lst {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+
+.vdung-row {
+    background-color: #EFFFF1; 
+    width: 95%; 
+    max-width: 1200px; 
+    margin-bottom: 5px; 
+    padding: 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+
+.vdung-ask {
+    font-size: 24px;     
+    color: #007724; 
+    margin-bottom: 10px ;
+    font-weight: normal; 
+}
+
+.vdung-rep {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease, margin-top 0.5s ease; 
+}
+
+
+.toggle-target {
+    position: absolute; /*vị trí tương đối so với phần tử cha(ở dây là vdung-row, 
+    cho phép là nó bao toàn bộ khu vực câu hỏi)*/
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0; 
+    opacity: 0; /*ẩn cái checkbox (cái ô vuông để tích )*/
+    cursor: pointer; 
+}
+
+
+.vdung-row:focus-within,
+.vdung-row:active,
+.vdung-row:target {
+    background-color: #FFFFFF; 
+    box-shadow: 0 5px 15px rgba(0, 72, 18, 0.2); 
+    height: auto; 
+}
+
+
+.vdung-row:focus-within .vdung-rep,
+.vdung-row:active .vdung-rep,
+.vdung-row:target .vdung-rep {
+    max-height: 1000px; 
+    margin-top: 10px; 
+}
+
+
+.vdung-row:focus-within .vdung-ask,
+.vdung-row:active .vdung-ask,
+.vdung-row:target .vdung-ask {
+    margin-bottom: 10px; 
+}
+
+
+.vdung-txt {
+    white-space: pre-wrap; 
+    font-size: 16px;
+    line-height: 1.5; 
+    padding-top: 10px; 
+    color: #007724;
+    padding-left: 45px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .vdung-box {
+        border-radius: 30px; 
+        padding: 0 0 20px 0; 
+    }
+    
+    h1 {
+        font-size: 40px; 
+    }
+    
+    .vdung-ask {
+        font-size: 20px; 
+    }
+    
+    .vdung-row {
+        padding: 15px; 
+        width: 98%; 
+    }
+    
+    .vdung-txt {
+        padding-left: 20px; 
+    }
+}
