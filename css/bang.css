@@ -110,3 +110,24 @@ body {
     text-align: center;
   }
 }
+/*  Desktop */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
