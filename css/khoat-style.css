@@ -8,9 +8,10 @@
 }
 
 .khoat-background {
+  background-color: #ffffff;
   margin: 10px;
   border: solid;
-  border-radius: 90px;
+  border-radius: 50px;
   padding: auto;
   border-color: #004812;
   border-width: 1px;
@@ -21,9 +22,9 @@
   font-family: "UTM Swiss";
   text-align: center;
   margin-top: 50px;
-  color: #007c1b;
+  color: #007724;
   font-size: 70px;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #khoat-p1 {
@@ -35,6 +36,7 @@
   line-height: 1.2;
   line-height: 100%;
   margin-top: 50px;
+  color: #000000;
 }
 
 .khoat-container {
@@ -43,22 +45,21 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 100px;
-  color: #106121;
+  color: #004812;
 }
 
 .khoat-covan {
   background-color: white;
   width: 500px;
   border-radius: 15px;
-  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 25px rgba(160, 160, 160, 0.25);
   padding-bottom: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .khoat-img {
   width: 100%;
   display: block;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .khoat-teacher {
@@ -82,6 +83,6 @@
 .khoat-pos {
   text-align: left;
   margin: 4px 0;
-  line-height: 1.3;
+  line-height: 100%;
   margin-left: 20px;
 }
